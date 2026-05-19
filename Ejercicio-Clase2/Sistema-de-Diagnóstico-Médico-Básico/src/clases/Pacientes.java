@@ -1,3 +1,5 @@
+package clases;
+
 public class Pacientes {
     private String nombre;
     private String fechaNacimiento;
@@ -8,22 +10,23 @@ public class Pacientes {
     private String numeroTelefono;
     private String direccion;
     private boolean seguro;
+    private double peso;
+    private double altura;
 
     public Pacientes() {
     }
 
-    public Pacientes(String nombre, String fechaNacimiento, int edad, String cedula,
-            String sexo, String genero, String numeroTelefono, String direccion,
-            boolean seguro) {
-        this.nombre = nombre;
-        this.fechaNacimiento = fechaNacimiento;
-        this.edad = edad;
-        this.cedula = cedula;
-        this.sexo = sexo;
-        this.genero = genero;
-        this.numeroTelefono = numeroTelefono;
-        this.direccion = direccion;
-        this.seguro = seguro;
+    public Pacientes(String nombre, String fechaNacimiento, int edad, String cedula, String sexo, String genero,
+            String numeroTelefono, String direccion, boolean seguro, double peso, double altura) {
+        setNombre(nombre);
+        setFechaNacimiento(fechaNacimiento);
+        setEdad(edad);
+        setCedula(cedula);
+        setSexo(sexo);
+        setGenero(genero);
+        setNumeroTelefono(numeroTelefono);
+        setDireccion(direccion);
+        setSeguro(seguro);
     }
 
     // Getters y Setters
@@ -98,5 +101,21 @@ public class Pacientes {
 
     public void setSeguro(boolean seguro) {
         this.seguro = seguro;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+    public double getAltura() {
+        return altura;
+    }
+
+    public void setAltura(double altura) {
+        this.altura = altura;
     }
 }
