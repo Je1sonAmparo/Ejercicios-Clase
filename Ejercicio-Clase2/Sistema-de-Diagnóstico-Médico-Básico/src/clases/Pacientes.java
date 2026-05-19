@@ -1,5 +1,7 @@
 package clases;
 
+import java.util.Scanner;
+
 public class Pacientes {
     private String nombre;
     private String fechaNacimiento;
@@ -117,5 +119,63 @@ public class Pacientes {
 
     public void setAltura(double altura) {
         this.altura = altura;
+    }
+
+    public static Pacientes agregarPaciente() {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("\n=== REGISTRO DE PACIENTE ===");
+
+        System.out.print("Ingrese el nombre completo: ");
+        String nombre = sc.nextLine();
+
+        System.out.print("Ingrese la fecha de nacimiento (DD/MM/AAAA): ");
+        String fechaNacimiento = sc.nextLine();
+
+        System.out.print("Ingrese la edad: ");
+        int edad = sc.nextInt();
+        sc.nextLine();
+
+        System.out.print("Ingrese la cedula: ");
+        String cedula = sc.nextLine();
+
+        System.out.print("Ingrese el sexo: ");
+        String sexo = sc.nextLine();
+
+        System.out.print("Ingrese el genero: ");
+        String genero = sc.nextLine();
+
+        System.out.print("Ingrese el numero de telefono: ");
+        String numeroTelefono = sc.nextLine();
+
+        System.out.print("Ingrese la direccion: ");
+        String direccion = sc.nextLine();
+
+        System.out.print("¿Tiene seguro medico? Ingrese: (1. Si / 2. No): ");
+        int opcion = sc.nextInt();
+        boolean seguro = (opcion == 1);
+
+        System.out.print("Ingrese el peso (en kg, ej. 70.5): ");
+        double peso = sc.nextDouble();
+
+        System.out.print("Ingrese la altura (en metros, ej. 1.75): ");
+        double altura = sc.nextDouble();
+
+        return new Pacientes(nombre, fechaNacimiento, edad, cedula, sexo, genero,
+                numeroTelefono, direccion, seguro, peso, altura);
+    }
+
+    public void mostrarPaciente() {
+        System.out.println("Nombre: " + this.nombre +
+                " | Fecha de Nac.: " + this.fechaNacimiento +
+                " | Edad: " + this.edad +
+                " | Cédula: " + this.cedula +
+                " | Sexo: " + this.sexo +
+                " | Género: " + this.genero +
+                " | Teléfono: " + this.numeroTelefono +
+                " | Dirección: " + this.direccion +
+                " | Seguro: " + (this.seguro ? "Sí" : "No") +
+                " | Peso: " + this.peso + "kg" +
+                " | Altura: " + this.altura + "m");
     }
 }
