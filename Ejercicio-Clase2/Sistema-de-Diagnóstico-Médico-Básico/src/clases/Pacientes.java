@@ -8,7 +8,6 @@ public class Pacientes {
     private int edad;
     private String cedula;
     private String sexo;
-    private String genero;
     private String numeroTelefono;
     private String direccion;
     private boolean seguro;
@@ -18,17 +17,18 @@ public class Pacientes {
     public Pacientes() {
     }
 
-    public Pacientes(String nombre, String fechaNacimiento, int edad, String cedula, String sexo, String genero,
+    public Pacientes(String nombre, String fechaNacimiento, int edad, String cedula, String sexo,
             String numeroTelefono, String direccion, boolean seguro, double peso, double altura) {
         setNombre(nombre);
         setFechaNacimiento(fechaNacimiento);
         setEdad(edad);
         setCedula(cedula);
         setSexo(sexo);
-        setGenero(genero);
         setNumeroTelefono(numeroTelefono);
         setDireccion(direccion);
         setSeguro(seguro);
+        setPeso(peso);
+        setAltura(altura);
     }
 
     // Getters y Setters
@@ -71,14 +71,6 @@ public class Pacientes {
 
     public void setSexo(String sexo) {
         this.sexo = sexo;
-    }
-
-    public String getGenero() {
-        return genero;
-    }
-
-    public void setGenero(String genero) {
-        this.genero = genero;
     }
 
     public String getNumeroTelefono() {
@@ -142,9 +134,6 @@ public class Pacientes {
         System.out.print("Ingrese el sexo: ");
         String sexo = sc.nextLine();
 
-        System.out.print("Ingrese el genero: ");
-        String genero = sc.nextLine();
-
         System.out.print("Ingrese el numero de telefono: ");
         String numeroTelefono = sc.nextLine();
 
@@ -161,7 +150,7 @@ public class Pacientes {
         System.out.print("Ingrese la altura (en metros, ej. 1.75): ");
         double altura = sc.nextDouble();
 
-        return new Pacientes(nombre, fechaNacimiento, edad, cedula, sexo, genero,
+        return new Pacientes(nombre, fechaNacimiento, edad, cedula, sexo,
                 numeroTelefono, direccion, seguro, peso, altura);
     }
 
@@ -172,7 +161,6 @@ public class Pacientes {
         System.out.println("Fecha de Nacimiento: " + getFechaNacimiento());
         System.out.println("Edad: " + getEdad() + " años");
         System.out.println("Sexo: " + getSexo());
-        System.out.println("Género: " + getGenero());
         System.out.println("Teléfono: " + getNumeroTelefono());
         System.out.println("Dirección: " + getDireccion());
         System.out.println("Seguro Médico: " + (isSeguro() ? "Sí" : "No"));
@@ -187,6 +175,10 @@ public class Pacientes {
         System.out.printf("\nEl paciente %s tiene un IMC de: %.2f\n", getNombre(), imc);
         System.out.print("Diagnóstico: ");
 
+        estadoPaciente(imc);    
+    }
+
+    public void estadoPaciente(double imc) {
         if (imc < 18.5) {
             System.out.println("Tiene peso bajo.");
         } else if (imc >= 18.5 && imc <= 24.9) {

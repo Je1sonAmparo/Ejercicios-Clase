@@ -19,6 +19,11 @@ public class Metodos {
             System.out.println("No hay pacientes registrados en el sistema.");
             return;
         }
+
+        for (int i = 0; i < pacientes.size(); i++) {
+            System.out.print("Paciente #" + (i + 1));
+            pacientes.get(i).mostrarPaciente();
+        }
     }
 
     public static void calcularIMC(ArrayList<Pacientes> pacientes) {
