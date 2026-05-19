@@ -166,16 +166,33 @@ public class Pacientes {
     }
 
     public void mostrarPaciente() {
-        System.out.println("Nombre: " + this.nombre +
-                " | Fecha de Nac.: " + this.fechaNacimiento +
-                " | Edad: " + this.edad +
-                " | Cédula: " + this.cedula +
-                " | Sexo: " + this.sexo +
-                " | Género: " + this.genero +
-                " | Teléfono: " + this.numeroTelefono +
-                " | Dirección: " + this.direccion +
-                " | Seguro: " + (this.seguro ? "Sí" : "No") +
-                " | Peso: " + this.peso + "kg" +
-                " | Altura: " + this.altura + "m");
+        System.out.println("\n--- Ficha del Paciente ---");
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("Cédula: " + getCedula());
+        System.out.println("Fecha de Nacimiento: " + getFechaNacimiento());
+        System.out.println("Edad: " + getEdad() + " años");
+        System.out.println("Sexo: " + getSexo());
+        System.out.println("Género: " + getGenero());
+        System.out.println("Teléfono: " + getNumeroTelefono());
+        System.out.println("Dirección: " + getDireccion());
+        System.out.println("Seguro Médico: " + (isSeguro() ? "Sí" : "No"));
+        System.out.println("Peso: " + getPeso() + " kg");
+        System.out.println("Altura: " + getAltura() + " m");
+        System.out.println("--------------------------");
+    }
+
+    public void calcularIMC() {
+        double imc = getPeso() / Math.pow(getAltura(), 2);
+
+        System.out.printf("\nEl paciente %s tiene un IMC de: %.2f\n", getNombre(), imc);
+        System.out.print("Diagnóstico: ");
+
+        if (imc < 18.5) {
+            System.out.println("Tiene peso bajo.");
+        } else if (imc >= 18.5 && imc <= 24.9) {
+            System.out.println("Peso normal.");
+        } else {
+            System.out.println("Sobrepeso.");
+        }
     }
 }
