@@ -1,6 +1,0 @@
-Nombre: jeison
-Edad: 19
-Matricula: 1000-5296
-Nombre: Diony
-Edad: 20
-Matricula: 1000-5231

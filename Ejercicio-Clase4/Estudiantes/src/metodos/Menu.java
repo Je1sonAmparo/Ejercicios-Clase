@@ -51,6 +51,7 @@ public class Menu {
                         bufWriter.write("Edad: " + edad);
                         bufWriter.newLine();
                         bufWriter.write("Matricula: " + matricula);
+                        bufWriter.newLine();
                         bufWriter.write("--------------------------------");
                         bufWriter.newLine();
                         bufWriter.close();
@@ -65,11 +66,11 @@ public class Menu {
 
                         System.out.println("\n=== Los estudiantes Registrados son los siguientes ===\n");
 
-                        BufferedReader bufWritter = new BufferedReader(read);
-                        while ((linea = bufWritter.readLine()) != null) {
+                        BufferedReader bufReader = new BufferedReader(read);
+                        while ((linea = bufReader.readLine()) != null) {
                             System.out.println(linea);
                         }
-                        bufWritter.close();
+                        bufReader.close();
 
                     } catch (IOException e) {
                         System.out.println("Error al mostrar los estudiantes.");
