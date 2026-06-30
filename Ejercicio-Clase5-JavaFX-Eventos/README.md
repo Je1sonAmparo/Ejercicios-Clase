@@ -155,7 +155,7 @@ A continuación, se presentan las capturas de pantalla de las tres aplicaciones 
 1. Clona el repositorio:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git https://github.com/Je1sonAmparo/Ejercicios-Clase/tree/main/Ejercicio-Clase5-JavaFX-Eventos
 ```
 
 2. Entra a la aplicación que deseas ejecutar:
