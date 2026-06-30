@@ -41,12 +41,7 @@ public class PrincipalController {
 
     @FXML
     public void initialize() {
-        cbBebida.getItems().addAll(
-            "Café americano", 
-            "Cappuccino", 
-            "Chocolate caliente", 
-            "Jugo natural"
-        );
+        cbBebida.getItems().addAll("Café americano", "Cappuccino", "Chocolate caliente", "Jugo natural");
     }
 
     @FXML
