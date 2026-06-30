@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox 
+        xmlns="http://javafx.com/javafx/21" 
+        xmlns:fx="http://javafx.com/fxml/1" 
+        fx:controller="controller.PrincipalController"
+        style="-fx-padding: 20;">
+        
+    
+    <Label 
+            text="Conversor de Monedas" />
+    
+    <Label 
+            text="Monto en pesos dominicanos:" />
+    
+    <TextField 
+            fx:id="txtMonto" 
+            onKeyPressed="#manejarKeyEvent" />
+    
+    <Label 
+            text="Moneda destino:" />
+    
+    <ComboBox 
+            fx:id="cbMoneda" />
+    
+    <Button 
+            fx:id="btnConvertir" 
+            text="Convertir" 
+            onAction="#convertir" 
+            onMouseEntered="#mouseEntraBoton" 
+            onMouseExited="#mouseSaleBoton" />
+    
+    <Button 
+            fx:id="btnLimpiar" 
+            text="Limpiar" 
+            onAction="#limpiar" />
+    
+    <Label 
+            text="Resultado:" />
+    
+    <Label 
+            fx:id="lblResultado" 
+            text="Esperando información..." />
+    
+    <Label 
+            fx:id="lblMensaje" 
+            text="Bienvenido al conversor" />
+
+</VBox>
