@@ -9,7 +9,7 @@
             "name": "App",
             "request": "launch",
             "mainClass": "App",
-            "projectName": "Ejercicio-Clase5-JavaFX-Eventos_80972d1c",
+            "projectName": "App1 - ConversorModenas_ab9845d1",
             "vmArgs": "--module-path C:\\JavaFX\\javafx-sdk-25.0.3\\lib --add-modules javafx.controls,javafx.fxml"
         }
     ]
