@@ -12,7 +12,7 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Principal.fxml"));
 
-        Scene scene = new Scene(loader.load());
+        Scene scene = new Scene(loader.load(), 400, 300);
         primaryStage.setTitle("Conversor de Monedas");
         primaryStage.setScene(scene);
         primaryStage.show();
