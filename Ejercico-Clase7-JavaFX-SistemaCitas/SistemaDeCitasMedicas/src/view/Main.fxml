@@ -45,7 +45,7 @@
         <TextField fx:id="txtPaciente" promptText="Nombre completo del paciente" GridPane.columnIndex="1" GridPane.rowIndex="1" />
         
         <Label text="Hora:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-        <TextField fx:id="txtHora" promptText="HH:MM (24h)" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+        <TextField fx:id="txtHora" promptText="HH:MM" GridPane.columnIndex="3" GridPane.rowIndex="1" />
         
         <Label text="Cédula:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
         <TextField fx:id="txtCedula" promptText="Solo números" GridPane.columnIndex="1" GridPane.rowIndex="2" />
